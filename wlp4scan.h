@@ -48,15 +48,40 @@ std::vector<Token> scan(const std::string &input);
 class Token {
   public:
     enum Kind {
-      ID = 0,
-      LABEL,
-      WORD,
-      COMMA,
+      ID,
+      NUM,
       LPAREN,
       RPAREN,
+      LBRACE,
+      RBRACE,
+      RETURN,
+      IF,
+      ELSE,
+      WHILE,
+      PRINTLN,
+      WAIN,
+      BECOMES,
       INT,
-      HEXINT,
-      REG,
+      EQ,
+      NE,
+      LT,
+      GT,
+      LE,
+      GE,
+      PLUS,
+      MINUS,
+      STAR,
+      SLASH,
+      PCT,
+      COMMA,
+      SEMI,
+      NEW,
+      DELETE,
+      LBRACK,
+      RBRACK,
+      AMP,
+      ZERO,
+      NULL1,
       WHITESPACE,
       COMMENT
     };
@@ -78,7 +103,7 @@ class Token {
      * or unsigned, and thus may lie anywhere in the range
      * -2147483648 .. 4294967295
      */
-    int64_t toLong() const;
+
 
 };
 
